@@ -4,7 +4,7 @@ window.addEventListener("load", function() {
 	video = document.querySelector('video')
 	video.autoplay = false
 	video.loop = false
-
+	document.querySelector('#volume').innerText = video.volume
 });
 
 document.querySelector("#play").addEventListener("click", function() {
@@ -45,6 +45,7 @@ document.querySelector("#mute").addEventListener("click", function(e) {
 
 document.querySelector("#slider").addEventListener("change", function(e) {
 	video.volume = e.target.value / 100
+	document.querySelector('#volume').innerText = video.volume
 });
 document.querySelector("#vintage").addEventListener("click", function() {
 	video.className = 'video oldSchool'
